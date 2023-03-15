@@ -17,13 +17,13 @@ import static pages.LoginPage.LOGIN_PAGE_URL;
 import static pages.MainPage.MAIN_PAGE_URL;
 
 public class LoginTest {
-    MainPage mainPage;
-    LoginPage loginPage;
-    RegisterPage registerPage;
-    ForgotPasswordPage forgotPasswordPage;
-    ProfilePage profilePage;
-    User user;
-    UserClient userClient;
+    private MainPage mainPage;
+    private LoginPage loginPage;
+    private RegisterPage registerPage;
+    private ForgotPasswordPage forgotPasswordPage;
+    private ProfilePage profilePage;
+    private User user;
+    private UserClient userClient;
 
     @Before
     public void setup() {

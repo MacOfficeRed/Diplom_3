@@ -19,11 +19,11 @@ import static pages.LoginPage.LOGIN_PAGE_URL;
 import static pages.MainPage.MAIN_PAGE_URL;
 
 public class RegistrationTest {
-    MainPage mainPage;
-    RegisterPage registerPage;
-    LoginPage loginPage;
-    User user;
-    UserClient userClient;
+    private MainPage mainPage;
+    private RegisterPage registerPage;
+    private LoginPage loginPage;
+    private User user;
+    private UserClient userClient;
 
     @Before
     public void setup() {
@@ -34,6 +34,7 @@ public class RegistrationTest {
 
     @After
     public void cleanup() {
+        closeWindow();
         userClient.deleteUserUsingApi(user);
     }
 
@@ -51,7 +52,6 @@ public class RegistrationTest {
         registerPage.clickRegisterButton();
         loginPage.loginPageShouldBeLoaded();
         assertEquals(LOGIN_PAGE_URL, getCurrentUrl());
-        closeWindow();
     }
 
     @Test
@@ -68,6 +68,5 @@ public class RegistrationTest {
         registerPage.setUserPassword(user.getPassword());
         registerPage.clickRegisterButton();
         registerPage.errorPasswordMessageShouldBeVisible();
-        closeWindow();
     }
 }

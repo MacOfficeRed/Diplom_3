@@ -20,11 +20,11 @@ import static pages.MainPage.MAIN_PAGE_URL;
 import static pages.ProfilePage.PROFILE_PAGE_URL;
 
 public class OpenProfileTest {
-    MainPage mainPage;
-    LoginPage loginPage;
-    ProfilePage profilePage;
-    User user;
-    UserClient userClient;
+    private MainPage mainPage;
+    private LoginPage loginPage;
+    private ProfilePage profilePage;
+    private User user;
+    private UserClient userClient;
 
     @Before
     public void setup() {

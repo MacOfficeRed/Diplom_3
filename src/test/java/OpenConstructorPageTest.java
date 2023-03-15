@@ -19,11 +19,11 @@ import static pages.LoginPage.LOGIN_PAGE_URL;
 import static pages.MainPage.MAIN_PAGE_URL;
 
 public class OpenConstructorPageTest {
-    MainPage mainPage;
-    LoginPage loginPage;
-    ProfilePage profilePage;
-    User user;
-    UserClient userClient;
+    private MainPage mainPage;
+    private LoginPage loginPage;
+    private ProfilePage profilePage;
+    private User user;
+    private UserClient userClient;
 
     @Before
     public void setup() {

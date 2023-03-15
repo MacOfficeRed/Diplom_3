@@ -19,11 +19,11 @@ import static pages.LoginPage.LOGIN_PAGE_URL;
 import static pages.MainPage.MAIN_PAGE_URL;
 
 public class LogoutTest {
-    MainPage mainPage;
-    LoginPage loginPage;
-    ProfilePage profilePage;
-    User user;
-    UserClient userClient;
+    private MainPage mainPage;
+    private LoginPage loginPage;
+    private ProfilePage profilePage;
+    private User user;
+    private UserClient userClient;
 
     @Before
     public void setup() {
@@ -35,6 +35,7 @@ public class LogoutTest {
 
     @After
     public void cleanup() {
+        closeWindow();
         userClient.deleteUserUsingApi(user);
     }
 
@@ -51,6 +52,5 @@ public class LogoutTest {
         profilePage = mainPage.clickProfileButtonAfterAuth();
         profilePage.clickLogout();
         assertEquals(LOGIN_PAGE_URL, getCurrentUrl());
-        closeWindow();
     }
 }

@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static pages.MainPage.MAIN_PAGE_URL;
 
 public class ConstructorTabsTest {
-    MainPage mainPage;
+    private MainPage mainPage;
 
     @Before
     public void setup() {
